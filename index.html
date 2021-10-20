@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Dreams | Welcome to Better Natural Sleep</title>
+
+    <!-- Native CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/img/favicon.jpg">
+
+    <!-- Swiper JS Carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <header class="top_bar">
+        <p>Free shipping on all USA orders.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Navbar/Cart Drawer -->
+        <section class="navbar-section">
+            <nav class="mobile_nav">
+                <div class="hamburger-toggle-nav" onclick="mobile_drawer">
+                    <img src="/img/btn-mobile.svg" alt="Hamburger Menu Button">
+                </div>
+
+                <div class="brand-logo">
+                    <a href="/index.html"><img src="/img/brand-logo.png" alt="Sweet Dreams"></a>
+                </div>
+
+                <div class="cart">
+                    <ul>
+                        <li><a href="#">Cart<span class="nav-cart-quantity"></span></a></li>
+                    </ul>
+                </div>
+
+                <aside>
+                    <div class="mobile_nav_drawer">
+                        <i class="fas fa-arrow-left close-nav-menu"></i>
+
+                        <div class="nav_list">
+                            <ul>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">3 Night Trial</a></li>
+                                <li><a href="#">Quality</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Blow</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="contact-info">
+                            <ul>
+                                <li><a href="mailto:malikyoung@me.com">Email: malikyoung@me.com</a></li>
+                                <li><a href="https://twitter.com/atkinyo" target="_blank">Follow: @AtkinYo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </nav>
+
+            <nav class="navbar">
+                <ul class="navbar-left">
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">3-Night-Trial</a></li>
+                    <li><a href="#">Quality</a></li>
+                </ul>
+
+                <div class="home-btn">
+                    <div class="brand-logo">
+                        <a href="/index.html"><img src="/img/brand-logo.png" alt="Sweet Dreams"></a>
+                    </div>
+                </div>
+
+                <ul class="navbar-right">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#" class="cart nav-cart-quantity">Cart<span class="mobile-nav-cart-quantity"></span></a></li>
+                </ul>
+            </nav>
+
+
+            <div class="cart-drawer">
+                <div class="cart-header">
+                    <p>Your Cart</p>
+
+                    <i class="fas fa-times close-drawer"></i>
+                </div>
+
+                <div class="empty-cart">
+                    <img src="/img/img-service.png" alt="Empty Cart">
+                    <p>Your cart is currently empty.</p>
+                </div>
+                
+                <div class="cart-item">
+                    <img src="/img/product.png" alt="Lullaby Berry DreamPotion">
+
+                    <div class="cart-item-details">
+
+                        <h3>Lullaby Berry DreamPotion</h3>
+
+                        <p class="cart-item-price">
+                            <p id="item_price"></p>
+                        </p>
+                        
+                        <div class="cart-item-footer">
+                            <p class="remove-cart-item" onclick="removeCartItem()"><a href="#">remove</a></p>
+
+                            <div class="cart-quantity">
+                                <a href="javascript:void(0);" class="btn-minus" id="cart_quantity_remove"> - </a>
+                                <div class="item-quantity"></div>
+                                <a href="javascript:void(0);" class="btn-add" id="cart_quantity_add"> + </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="item-checkout-footer">
+                    <div class="item-checkout-footer-subtotal">
+                        <p>Subtotal</p>
+                        <span id="subtotal_price">59.97</span>
+                    </div>
+
+                    <button type="submit" class="item-checkout-footer-btn">Checkout</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-banner">
+            <div class="banner">
+                <div class="banner-header">
+                    <h1>Reclaim Your Sleep Schedule</h1>
+                    <p>Try our magical blend of full-spectrum hemp, premium melatonin, and taste blueberry extract.</p>
+                </div>
+
+                <div class="banner-cta-btn">
+                  <a href="/shop_page.html"> <button type="submit">Buy Now</button>
+                  </div></a>
+            </div>
+        </section>
+
+        <!-- About Carousel Area -->
+        <section class="about-area">
+            <div class="about-section">
+                <div class="about-header">
+                    <h1>Get your sleep back on track.</h1>
+                    <p>Got an inconsistent sleep schedule you keep talking about fixing, but never actually commit to? How about an early flight to catch in the morning?</p>
+                </div>
+
+                <div class="about-carousel">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="/img/img-service.png" alt="Services">
+                            <h2>Reset your internal clock</h2>
+                            <p>Sometimes one sh*tty night throws us off balance. Get back on track with just a few drops of Sweet Dreams.</p>
+                        </div>
+                        <div class="item">
+                            <img src="/img/img-service2.png" alt="Services" id="service-img">
+                            <h2>Reclaim your zZz's</h2>
+                            <p>Reap the rewards of a full night's rest, like enhanced mood, cognition, and productivity.</p>
+                        </div>
+                        <div class="item">
+                            <img src="/img/img-service3.png" alt="Services">
+                            <h2>An all-natural sleep aid</h2>
+                            <p>Made with 100% natural ingredients. Say goodbye to groggy mornings and syntheitic pharmaceuticals.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dropper Area -->
+        <section class="dropper-section">
+            <div class="dropper-container">
+                <div class="dropper-header">
+                    <h1>Specializing in what dreams are made of.</h1>
+                    <p>Our one-of-a-kind elixir combines full-spectrum hemp with melatonin for a complementary pairing that works even better together to maximize sleep support. </p>
+                </div>
+
+                <div class="dropper-wrapper">
+                    <img src="/img/img-dropper.png" alt="Dropper" class="dropper"> <br>
+                    <img src="/img/img-tincture.png" alt="Tincture" class="tincture"> <br>
+                    <img src="/img/img-tincture2.png" alt="Tincture" class="tincture2">
+                </div>
+
+                <div class="dropper-carousel-stage">
+                    <div class="dropper-carousel">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <h2>Full-spectrum hemp</h2>
+                                <p>An anti-inflammatory that works with your body's cell-signaling system to calm your nerves. Contains terpenes and flavanoids to wind your body down before bed.</p>
+                            </div>
+                            <div class="item">
+                                <h2>Blueberry extract</h2>
+                                <p>Naturally flavored with antioxidant-rich blueberry extract to wipe out groggy, drowsy mornings and for sweeter sleep support.</p>
+                            </div>
+                            <div class="item">
+                                <h2>Premium melatonin</h2>
+                                <p>Melatonin + hemp work synergistically with one another to enhance each other's sedative effects. Fall asleep faster, and stay asleep longer.</p>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dropper Content -->
+        <section class="dropper-comparison-section">
+            <div class="dropper-comparison-container">
+                <div class="dcc-header">
+                    <h1>We're so good at helping you sleep, we can do it with our eyes closed.</h1>
+                    <p>As a company with our eyes on just one prize (premium sleep offerings), we’ve got the unique ability to really specialize in formulating just the right blend of ingredients that truly enhance your sleep experience.</p>
+
+                    <button type="submit">Buy Now</button>
+                </div>
+
+                <div class="dcc-content">
+                    <div class="dcc-left">
+                        <ul class="dcc-pros">
+                                <img src="/img/bottle1.svg" alt="Bottle" class="dropper-content-1">
+                                <li>Tastes Better</li>
+                                <li>No grogginess</li>
+                                <li>Premium ingredients</li>
+                                <li>Improves sleep</li>
+                        </ul>
+                    </div>
+
+                    <div class="dcc-right">
+                        <ul class="dcc-cons">
+                                <img src="/img/bottle2.svg" alt="Bottle">
+                                <li>Bitter tasting</li>
+                                <li>Improper dosing</li>
+                                <li>Shady ingredients</li>
+                                <li>Little to no effect</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Card -->
+        <section class="product-section">
+            <div class="product-container">
+                <div class="product-image">
+                    <img src="/img/product.png" alt="Sweet Dreams Lullaby Berry Potion">
+                </div>
+
+                <div class="product-details-container">
+                    <div class="product-name">
+                        <h2>Lullaby Berry Potion</h2>
+                    </div>
+                    <div class="product-price">
+                        <h3>$59.97</h3>
+                        <a href="#"><p>or 4 interest-free payments of <span>$14.99</span> with<img src="/img/sezzleLogo.svg" alt=""></p></a>
+                    </div>
+                    <div class="product-details">
+                        <p>One tincture, a range of benefits.</p>
+                        <p>Less is more when it comes to our 500mg Lullaby Berry Tincture. Take control of your sleep schedule with just a few tasty drops.</p>
+                    </div>
+                    <div class="product-btn">
+                        <button type="submit">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo Area -->
+        <section class="promo-section">
+            <div class="promo-container">
+                <div class="promo-header">
+                    <h2>3 Vials for 3 Nights</h2>
+                    <p>Enjoy our 3 night trial of our 500mg Lullaby Berry Dream Potion. You'll receive 3 vials of our sleep elixir to get you through 3 nights.</p>
+                </div>
+
+                <div class="promo-image">
+                    <img src="/img/promo-img.png" alt="500mg Lullaby Berry Dream Potion">
+                </div>
+
+                <div class="promo-cta">
+                    <div class="desktop-promo-header">
+                        <h2>3 Vials for 3 Nights</h2>
+                        <p>Enjoy our 3 night trial of our 500mg Lullaby Berry Dream Potion. You'll receive 3 vials of our sleep elixir to get you through 3 nights.</p>
+                    </div>
+                    <div class="promo-btn">
+                        <button type="submit">Claim Now</button>
+                        <p>After that, you'll automatically be subscribed to monthly refills at $49/month</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Email -->
+        <section class="email-section">
+            <div class="email-container">
+                <div class="email-header">
+                    <h2>Don't sleep on us, though.</h2>
+                    <p>Sign up and instantly get 10% off your first order.</p>
+                </div>
+
+                <div class="email-form">
+                    <form action="#" method="post">
+                        <input type="email" name="email" placeholder="Email address">
+                        <label for="email">submit</label>
+                    </form>
+                </div>
+
+                <div class="email-social-media">
+                    <p><a href="#">Instagram</a></p>
+                    <p><a href="#">Facebook</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-header">
+                <p>These statements have not been evaluated by the FDA. These products are not intended to diagnose, cure, prevent, or treat any disease.</p>
+            </div>
+
+            <div class="footer-content">
+                <ul class="footer-list">
+                    <li>Privacy Policy</li>
+                    <li>Terms of Use</li>
+                    <li>Site Credit</li>
+                </ul>
+                <img src="/img/payment-method.png" alt="Methods of Payment">
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Owl Carousel Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Swiper JS Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Native Script -->
+    <script src="/js/script.js"></script>
+</body>
+</html>
